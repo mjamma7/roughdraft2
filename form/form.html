@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+
+<html lang="en-US">
+ 
+
+<head>
+
+
+<meta charset="utf-8" /> 
+
+
+<title>Contact Us or Schedule an Appointment</title>
+
+
+<script>
+//Form validate code here//
+function validateForm(){   
+
+if (document.myForm.first_name.value=="")
+ {
+    alert("Please provide your first name.");
+    document.myForm.first_name.focus();
+    return false;
+}
+if (document.myForm.last_name.value=="")
+ {
+    alert("Please provide your last name.");
+    document.myForm.last_name.focus();
+    return false;
+}
+if (document.myForm.phone_number.value=="")
+ {
+    alert("Please provide your phone number.");
+    document.myForm.phone_number.focus();
+    return false;
+}
+if (document.myForm.email_address.value=="")
+ {
+    alert("Please provide your Email.");
+    document.myForm.email_address.focus();
+    return false;
+}
+
+return( true );
+}
+
+
+</script>
+
+</head>
+
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<link type="text/css" href="form.css" rel="stylesheet" />
+
+
+<style>
+
+
+
+body {
+	
+font-family:serif, sans-serif;
+
+background:#C7BDFF;
+	
+/* Firefox (10.0.2) styles 
+textarea in Courier by default and does not inherit font-family from body */
+	}
+
+
+a#toggleLeftLabels, a#hiliteErrors 
+{
+	color:#555;
+	font-size:1.375em;
+	margin-left:.5em;
+	}
+
+</style>
+
+
+
+
+
+<body>
+    
+<div id="wrapper">  
+<!-- temp - for this demo only - use your container -->
+    
+    
+<!--FORM WIITH LABELS ABOVE OR TO LEFT OF CONTROLS-->
+      
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"> 
+<!-- the required form tag -->
+        
+
+<div class="floatbox2">
+
+<div class="floatleft">
+
+<img src="img2/Star.png" width=3% height=5% alt="Star Logo" align=left></img>
+
+</div>  		
+
+<a href="index.html"><h1>Financial Services, LLC</h1></a>
+
+</div>   	               
+<!--START OF FORM ELEMENTS-->
+        
+<!-- A SINGLE LINE TEXT FIELD -->
+	
+        
+<fieldset> <!-- the container for a group of controls -->
+        
+
+<legend><span>Contact Information</span></legend> 
+
+<!-- the title for a fieldset -->
+        
+
+<section> <!-- control, label and direction wrapper for styling -->
+            
+
+<p class="note">* indicates required field</p>
+  
+
+<p><strong>Please enter your information</strong></p>
+       
+
+<label for="first_name">First Name<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+ 
+           
+<input type="text" class="entry" id="First Name" name="first_name" />  
+
+<label for="last_name">Last Name<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+            
+
+<input type="text" class="entry" id="Last Name" name="last_name" />
+
+<label for="phone_number">Phone Number<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+            
+
+
+<input type="tel" class="entry" id="Phone Number" name="phone_number" placeholder="123-4567-8901"/>
+
+<label class="emaillabel" for="email_address">Email Address<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+ 
+<input type="email" id="email_address" name="email_address" placeholder="default@example.com"/>          
+
+
+<!-- the text attribute makes this input display as a text field -->
+  
+            
+    
+</section>
+
+        
+<!-- END SINGLE LINE TEXT FIELD -->
+       
+             
+
+<!-- A HTML5 DATE FIELD -->
+               
+
+<!-- CHECKBOXES -->
+       
+
+<section>
+            
+
+<h4>Days you are available for an appointment:
+
+</h4>
+            
+
+<p>Please choose one or more days (optional)</p>
+     
+
+<div class="Appointment">
+<section>
+                    
+<input type="checkbox" id="check1" name="checkset" value="1" />
+
+<label class="button" for="check1">Monday</label>
+                
+</section>
+                             
+
+<section>
+                   
+<input type="checkbox"  id="check2" name="checkset" value="2" />
+                   
+<label class="button" for="check2">Tuesday</label>
+                
+</section>
+        
+
+<section>
+                   
+<input type="checkbox"  id="check3" name="checkset" value="3" />
+                   
+<label class="button" for="check3">Wednesday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check4" name="checkset" value="4" />
+                   
+<label class="button" for="check4">Thursday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check5" name="checkset" value="5" />
+                   
+<label class="button" for="check5">Friday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check6" name="checkset" value="6" />
+                   
+<label class="button" for="check6">Saturday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check6" name="checkset" value="6" />
+                   
+<label class="button" for="check6">Any Day</label>
+                
+</section>
+ 
+	       
+</section>
+        
+</div>
+<!-- END CHECKBOXES -->
+   
+
+<!-- A MULTI-LINE TEXT FIELD -->
+        
+<section>	
+            
+
+<label for="comment">Appointment Requests Info:</label>
+            
+<textarea id="description" name="description" placeholder="(Optional) Enter info here."></textarea>
+     
+</section>
+        
+
+
+<div style="clear:both; padding:20px 0 0 0; font-size:1.375em; color:#666;">
+
+<input type="submit" id="myBtn" value="Submit">
+</form>    
+
+</div>
+ 
+   
+
+</body>
+
+
+</html>

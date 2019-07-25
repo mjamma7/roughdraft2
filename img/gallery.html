@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Financial Services LLC</title>
+    
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+ 
+   
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:400,700|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+<script src="helpers/modernizr_dev.js"></script>
+  
+
+  
+
+<body>
+
+	
+
+<div id="wrapper">
+    	
+
+<header>
+
+
+<div class="floatbox2">
+
+<div class="floatleft">
+
+<img src="Star.png" width=50px height=50px alt="Star Logo"></img>
+
+</div>  		
+
+<h1>Financial Services, LLC</h1> 
+
+</div>   	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<h2 style="text-align:center">A Gallery of Our Services</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="01.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="02.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="03.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="04.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src="01.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <img src="02.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <img src="03.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="04.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Meet with our expert advisors">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="02.jpg" style="width:100%" onclick="currentSlide(2)" alt="We offer the best rates available">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Get help with estate planning">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="04.jpg" style="width:100%" onclick="currentSlide(4)" alt="We are highly ranked on customer surveys">
+    </div>
+  
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
